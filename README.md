@@ -197,7 +197,7 @@ Bachelor of Science in Cybersecurity and Information Assurance
 https://github.com/KarenB1-tech
 
 🔗 **LinkedIn**  
-https://www.linkedin.com/in/karen-batres-umana/
+https://www.linkedin.com/in/karen-batres-umana-a31245358/
 
 ---
 

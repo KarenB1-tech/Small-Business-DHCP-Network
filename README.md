@@ -256,7 +256,7 @@ Western Governors University (WGU)
 
 **GitHub:** https://github.com/KarenB1-tech
 
-**LinkedIn:** *(Add your LinkedIn profile URL here.)*
+**LinkedIn:** https://www.linkedin.com/in/karen-batres-umana-a31245358/
 
 ---
 

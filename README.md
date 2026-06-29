@@ -1,79 +1,10 @@
-# 🖧 Small Business DHCP Network
-### Cisco Packet Tracer | Cisco IOS | DHCP | IPv4 Networking
-
----
-
-# 📌 Project Overview
-
-![Project Overview](00-Project-Overview.png)
-
-This project demonstrates the design, configuration, and verification of a **Small Business Local Area Network (LAN)** using **Cisco Packet Tracer**.
-
-The network simulates a small office environment consisting of one Cisco 1941 router, one Cisco 2960 switch, an Internet cloud for topology representation, and twelve client computers representing multiple business departments.
-
-The Cisco router was configured as a **DHCP server**, allowing all client devices to automatically obtain IPv4 addresses instead of requiring manual static IP configuration.
-
-This project was completed as part of my hands-on networking practice while preparing for the **Bachelor of Science in Cybersecurity and Information Assurance at Western Governors University (WGU)** and the **CompTIA Network+ certification**.
-
----
-
-# 📑 Table of Contents
-
-- Project Overview
-- Project Objectives
-- Business Scenario
-- Network Topology
-- Devices Used
-- Network Information
-- Router Configuration
-- DHCP Client Configuration
-- Network Verification
-- Connectivity Testing
-- Skills Demonstrated
-- What I Learned
-- Repository Contents
-- Future Improvements
-- Author
-
----
-
-# 🎯 Project Objectives
-
-The objectives of this project were to:
-
-- Design a small business LAN.
-- Configure a Cisco 1941 router.
-- Configure the router as a DHCP server.
-- Automatically assign IPv4 addresses to client devices.
-- Verify DHCP operation.
-- Test end-to-end network connectivity.
-- Document the project professionally using GitHub.
-
----
-
-# 🏢 Business Scenario
-
-**Company:** BlueWave Consulting
-
-BlueWave Consulting is a small business with twelve employees distributed across multiple departments.
-
-Departments included in this project:
-
-- Reception
-- Management
-- Accounting
-- Sales
-- Human Resources
-- IT
-- Shared Devices
-
-The goal was to build a functional office network where all computers automatically receive their IP configuration through DHCP.
-
----
-
 # 🌐 Network Topology
 
-![Network Topology](01-Small-Business-Topology.jpg)
+<p align="center">
+  <img src="01-Small-Business-Topology.jpg" width="900">
+</p>
+
+This topology demonstrates a centralized LAN where every client connects to a Cisco switch, which connects to the Cisco router acting as both the default gateway and DHCP server.
 
 ---
 
@@ -88,49 +19,51 @@ The goal was to build a functional office network where all computers automatica
 
 ---
 
-# 🌍 Network Information
+# 🌍 Network Configuration
 
-| Configuration | Value |
-|--------------|-------|
+| Setting | Value |
+|---------|-------|
 | Network Address | 192.168.10.0/24 |
-| Router IP Address | 192.168.10.1 |
+| Router IP | 192.168.10.1 |
 | Default Gateway | 192.168.10.1 |
-| DHCP Scope | 192.168.10.10 – 192.168.10.254 |
+| DHCP Pool | 192.168.10.10 - 192.168.10.254 |
 | DNS Server | 8.8.8.8 |
 
 ---
 
 # ⚙️ Router Configuration
 
-The Cisco 1941 router was configured to:
+The Cisco router was configured to:
 
-- Configure the router hostname.
-- Configure the GigabitEthernet interface.
-- Assign the LAN IP address.
+- Configure the hostname.
+- Configure the LAN interface.
+- Assign the gateway IP address.
 - Configure DHCP excluded addresses.
-- Create a DHCP address pool.
+- Create the DHCP pool.
 - Configure the default gateway.
 - Configure the DNS server.
 - Save the running configuration.
 
-### Router Configuration
-
-![Router Configuration](02-Router-DHCP-Configuration.jpg)
+<p align="center">
+  <img src="02-Router-DHCP-Configuration.jpg" width="900">
+</p>
 
 ---
 
 # 💻 DHCP Client Configuration
 
-Each client computer was configured to automatically obtain its IP address using DHCP.
+Every workstation was configured to automatically obtain its network settings.
 
-Every workstation successfully received:
+Each client successfully received:
 
-- IP Address
+- IPv4 Address
 - Subnet Mask
 - Default Gateway
 - DNS Server
 
-![PC DHCP Configuration](03-PC-DHCP-Configuration.jpg)
+<p align="center">
+  <img src="03-PC-DHCP-Configuration.jpg" width="850">
+</p>
 
 ---
 
@@ -146,36 +79,42 @@ show ip dhcp binding
 
 These commands verified:
 
-- Router interface status
-- DHCP address pool
-- Active DHCP leases
-- Interface operational status
+- Interface status
+- DHCP pool configuration
+- DHCP leases
+- Router operational status
 
-![Router Verification](04-Router-Verification-Commands.jpg)
+<p align="center">
+  <img src="04-Router-Verification-Commands.jpg" width="900">
+</p>
 
 ---
 
 # 📡 Connectivity Testing
 
-## Ping Test to the Router
+## Ping Test to Router
 
 The client computer successfully communicated with the default gateway.
 
-![Ping Router](05-Ping-Router-Success.jpg)
+<p align="center">
+  <img src="05-Ping-Router-Success.jpg" width="850">
+</p>
 
 ---
 
 ## PC-to-PC Communication
 
-All client computers successfully communicated with each other after receiving their DHCP configuration.
+Successful communication between client devices confirmed proper DHCP operation and Layer 3 connectivity.
 
-![PC-to-PC Communication](06-PC-to-PC-Success.jpg)
+<p align="center">
+  <img src="06-PC-to-PC-Success.jpg" width="850">
+</p>
 
 ---
 
 # 🧠 Skills Demonstrated
 
-Through this project I practiced:
+This project strengthened my experience with:
 
 - Cisco Packet Tracer
 - Cisco IOS CLI
@@ -183,10 +122,10 @@ Through this project I practiced:
 - DHCP Configuration
 - IPv4 Addressing
 - LAN Design
-- Switch Connectivity
+- Switch Configuration
 - Network Verification
-- Ping Testing
-- Basic Troubleshooting
+- Connectivity Testing
+- Basic Network Troubleshooting
 - Technical Documentation
 - GitHub Portfolio Development
 
@@ -194,29 +133,29 @@ Through this project I practiced:
 
 # 📚 What I Learned
 
-This project helped me gain practical experience designing and configuring a small business network.
+Completing this project improved my understanding of how a real small business network operates.
 
-Key concepts I learned include:
+Key concepts I practiced include:
 
-- Designing and documenting a LAN topology.
-- Configuring a Cisco router using the Cisco IOS Command-Line Interface.
-- Configuring a Cisco router as a DHCP server.
-- Understanding how DHCP automatically assigns IP addresses to clients.
-- Configuring client computers to obtain IP addresses dynamically.
-- Verifying DHCP leases and router interfaces using Cisco verification commands.
-- Testing connectivity with the `ping` command.
-- Strengthening my understanding of IPv4 addressing, subnet masks, default gateways, and DNS configuration.
-- Practicing basic network troubleshooting techniques.
-- Improving my technical documentation skills using GitHub.
+- Designing a LAN topology.
+- Configuring Cisco routers using the IOS CLI.
+- Configuring DHCP services.
+- Understanding how DHCP automatically assigns IP addresses.
+- Configuring clients to obtain IP addresses dynamically.
+- Verifying DHCP leases and interface status.
+- Testing connectivity using the `ping` command.
+- Understanding IPv4 addressing and default gateways.
+- Practicing network troubleshooting.
+- Creating professional technical documentation for GitHub.
 
-This project strengthened my understanding of networking concepts that are covered in Cisco networking courses, CompTIA Network+, and the WGU Cybersecurity and Information Assurance program.
+This project strengthened concepts covered in Cisco Networking, CompTIA Network+, and the WGU Cybersecurity program.
 
 ---
 
 # 📁 Repository Contents
 
 ```text
-Small-Business-DHCP-Network/
+Small-Business-DHCP-Network
 │
 ├── README.md
 ├── Small-Business-DHCP-Network.pkt
@@ -233,9 +172,9 @@ Small-Business-DHCP-Network/
 
 # 🚀 Future Improvements
 
-The next version of this project will include:
+Future versions of this network will include:
 
-- VLAN Configuration
+- VLANs
 - Router-on-a-Stick
 - Inter-VLAN Routing
 - Multiple DHCP Scopes
@@ -243,21 +182,29 @@ The next version of this project will include:
 - Wireless Networking
 - Basic Network Security
 
-These enhancements will continue building my networking and cybersecurity skills through hands-on practice.
+These enhancements will continue expanding my networking and cybersecurity skills through hands-on projects.
 
 ---
 
 # 👩‍💻 Author
 
-**Karen Batres**
+## Karen Batres
 
 Bachelor of Science in Cybersecurity and Information Assurance  
-Western Governors University (WGU)
+**Western Governors University (WGU)**
 
-**GitHub:** https://github.com/KarenB1-tech
+🔗 **GitHub**  
+https://github.com/KarenB1-tech
 
-**LinkedIn:** https://www.linkedin.com/in/karen-batres-umana-a31245358/
+🔗 **LinkedIn**  
+https://www.linkedin.com/in/karen-batres-umana/
 
 ---
 
-⭐ **Thank you for reviewing my project! Feedback and suggestions are always welcome.**
+## ⭐ Thank You
+
+Thank you for taking the time to review my project.
+
+I am continuously building hands-on networking and cybersecurity projects while expanding my technical skills through Cisco Packet Tracer, WGU, CompTIA certifications, and practical lab environments.
+
+Feedback and suggestions are always appreciated!
